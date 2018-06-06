@@ -4,6 +4,9 @@ import com.suncorp.repaycalculator.request.LoanAmount;
 
 import java.math.BigDecimal;
 
+/**
+ * @author Divya
+ */
 public class ServiceFee {
 
     private LoanAmount amount;

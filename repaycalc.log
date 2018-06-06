@@ -1,0 +1,883 @@
+2018-06-06 11:35:34 - Starting RepayCalculatorApplication on Divya-PC with PID 9760 (E:\MyWorkSpace\repay-calculator\target\classes started by Divya in E:\MyWorkSpace\repay-calculator)
+2018-06-06 11:35:34 - Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-06-06 11:35:34 - No active profile set, falling back to default profiles: default
+2018-06-06 11:35:34 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d2adfbe: startup date [Wed Jun 06 11:35:34 IST 2018]; root of context hierarchy
+2018-06-06 11:35:37 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$47920167] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 11:35:38 - Tomcat initialized with port(s): 8080 (http)
+2018-06-06 11:35:38 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-06 11:35:38 - Starting service [Tomcat]
+2018-06-06 11:35:38 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-06 11:35:38 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Divya\AppData\Roaming\Cloud Foundry;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Divya\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Java\jdk1.8.0_161\jre\lib;C:\Users\Divya\AppData\Roaming\npm;;C:\Program Files\Microsoft VS Code\bin;.]
+2018-06-06 11:35:38 - Initializing Spring embedded WebApplicationContext
+2018-06-06 11:35:38 - Root WebApplicationContext: initialization completed in 4601 ms
+2018-06-06 11:35:39 - Servlet dispatcherServlet mapped to [/]
+2018-06-06 11:35:39 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 11:35:39 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 11:35:39 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 11:35:39 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 11:35:39 - HikariPool-1 - Starting...
+2018-06-06 11:35:41 - HikariPool-1 - Start completed.
+2018-06-06 11:35:41 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:35:41 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-06 11:35:41 - HHH000412: Hibernate Core {5.2.17.Final}
+2018-06-06 11:35:41 - HHH000206: hibernate.properties not found
+2018-06-06 11:35:41 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-06 11:35:42 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-06-06 11:35:43 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@35e26d05'
+2018-06-06 11:35:43 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 11:35:44 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:35:45 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1d2adfbe: startup date [Wed Jun 06 11:35:34 IST 2018]; root of context hierarchy
+2018-06-06 11:35:45 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-06-06 11:35:45 - Mapped "{[/api/repay/calculate],methods=[POST]}" onto public com.suncorp.repaycalculator.response.RepayCalcResponse com.suncorp.repaycalculator.controller.RepayCalController.calculateRepayment(com.suncorp.repaycalculator.request.RepayCalcRequest)
+2018-06-06 11:35:45 - Mapped "{[/api/repay/loanTypes],methods=[GET]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanTypeDropDown()
+2018-06-06 11:35:45 - Mapped "{[/api/repay/loanPeriod],methods=[GET]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPeriodDropDown()
+2018-06-06 11:35:45 - Mapped "{[/api/repay/loanPurpose],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPurposeDropDown()
+2018-06-06 11:35:45 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 11:35:45 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 11:35:45 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:35:45 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 11:35:45 - Registering beans for JMX exposure on startup
+2018-06-06 11:35:45 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-06 11:35:45 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-06-06 11:35:45 - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-06 11:35:45 - Using a shared selector for servlet write/read
+2018-06-06 11:35:45 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-06-06 11:35:45 - Started RepayCalculatorApplication in 12.579 seconds (JVM running for 16.588)
+2018-06-06 11:36:43 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-06 11:36:43 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-06 11:36:44 - FrameworkServlet 'dispatcherServlet': initialization completed in 124 ms
+2018-06-06 11:36:44 - Populating Loan Type dropdown start
+2018-06-06 11:36:44 - Populating Loan Type dropdown end
+2018-06-06 11:36:44 - Populating Loan period dropdown start
+2018-06-06 11:36:44 - Populating Loan period dropdown end
+2018-06-06 11:36:44 - Populating Loan period dropdown start
+2018-06-06 11:36:44 - Populating Loan period dropdown end
+2018-06-06 11:36:44 - Populating Loan Type dropdown start
+2018-06-06 11:36:44 - Populating Loan Type dropdown end
+2018-06-06 11:36:44 - Populating Loan Purpose dropdown start
+2018-06-06 11:36:44 - Populating Loan purpose dropdown end
+2018-06-06 11:36:44 - Populating Loan Purpose dropdown start
+2018-06-06 11:36:44 - Populating Loan purpose dropdown end
+2018-06-06 11:38:13 - Populating Loan Type dropdown start
+2018-06-06 11:38:13 - Populating Loan Type dropdown end
+2018-06-06 11:38:13 - Populating Loan Purpose dropdown start
+2018-06-06 11:38:13 - Populating Loan purpose dropdown end
+2018-06-06 11:38:13 - Populating Loan period dropdown start
+2018-06-06 11:38:13 - Populating Loan period dropdown end
+2018-06-06 11:38:51 - Populating Loan Type dropdown start
+2018-06-06 11:38:51 - Populating Loan Type dropdown end
+2018-06-06 11:38:51 - Populating Loan Purpose dropdown start
+2018-06-06 11:38:51 - Populating Loan purpose dropdown end
+2018-06-06 11:38:51 - Populating Loan period dropdown start
+2018-06-06 11:38:51 - Populating Loan period dropdown end
+2018-06-06 11:39:08 - Calculating Repayment start
+2018-06-06 11:39:08 - Calculating Repayment end
+2018-06-06 11:40:50 - Populating Loan Type dropdown start
+2018-06-06 11:40:50 - Populating Loan Type dropdown end
+2018-06-06 11:40:50 - Populating Loan Purpose dropdown start
+2018-06-06 11:40:50 - Populating Loan purpose dropdown end
+2018-06-06 11:40:50 - Populating Loan period dropdown start
+2018-06-06 11:40:50 - Populating Loan period dropdown end
+2018-06-06 11:43:20 - Populating Loan Type dropdown start
+2018-06-06 11:43:20 - Populating Loan Type dropdown end
+2018-06-06 11:43:20 - Populating Loan Purpose dropdown start
+2018-06-06 11:43:20 - Populating Loan purpose dropdown end
+2018-06-06 11:43:20 - Populating Loan period dropdown start
+2018-06-06 11:43:20 - Populating Loan period dropdown end
+2018-06-06 11:43:55 - Calculating Repayment start
+2018-06-06 11:43:55 - Calculating Repayment end
+2018-06-06 11:49:10 - Populating Loan Type dropdown start
+2018-06-06 11:49:10 - Populating Loan Type dropdown end
+2018-06-06 11:49:10 - Populating Loan Purpose dropdown start
+2018-06-06 11:49:10 - Populating Loan purpose dropdown end
+2018-06-06 11:49:10 - Populating Loan period dropdown start
+2018-06-06 11:49:10 - Populating Loan period dropdown end
+2018-06-06 11:49:31 - Calculating Repayment start
+2018-06-06 11:49:31 - Calculating Repayment end
+2018-06-06 11:57:19 - Populating Loan Type dropdown start
+2018-06-06 11:57:19 - Populating Loan Type dropdown end
+2018-06-06 11:57:19 - Populating Loan Purpose dropdown start
+2018-06-06 11:57:19 - Populating Loan purpose dropdown end
+2018-06-06 11:57:19 - Populating Loan period dropdown start
+2018-06-06 11:57:19 - Populating Loan period dropdown end
+2018-06-06 12:12:39 - Populating Loan Type dropdown start
+2018-06-06 12:12:39 - Populating Loan Type dropdown end
+2018-06-06 12:12:39 - Populating Loan Purpose dropdown start
+2018-06-06 12:12:39 - Populating Loan purpose dropdown end
+2018-06-06 12:12:39 - Populating Loan period dropdown start
+2018-06-06 12:12:39 - Populating Loan period dropdown end
+2018-06-06 12:14:06 - Populating Loan Type dropdown start
+2018-06-06 12:14:06 - Populating Loan Type dropdown end
+2018-06-06 12:14:06 - Populating Loan period dropdown start
+2018-06-06 12:14:06 - Populating Loan period dropdown end
+2018-06-06 12:14:06 - Populating Loan Purpose dropdown start
+2018-06-06 12:14:06 - Populating Loan purpose dropdown end
+2018-06-06 12:14:42 - Populating Loan Type dropdown start
+2018-06-06 12:14:42 - Populating Loan Type dropdown end
+2018-06-06 12:14:42 - Populating Loan Purpose dropdown start
+2018-06-06 12:14:42 - Populating Loan purpose dropdown end
+2018-06-06 12:14:42 - Populating Loan period dropdown start
+2018-06-06 12:14:42 - Populating Loan period dropdown end
+2018-06-06 12:16:08 - Populating Loan Type dropdown start
+2018-06-06 12:16:08 - Populating Loan Type dropdown end
+2018-06-06 12:16:08 - Populating Loan period dropdown start
+2018-06-06 12:16:08 - Populating Loan period dropdown end
+2018-06-06 12:16:08 - Populating Loan Purpose dropdown start
+2018-06-06 12:16:08 - Populating Loan purpose dropdown end
+2018-06-06 12:16:23 - Calculating Repayment start
+2018-06-06 12:16:23 - Calculating Repayment end
+2018-06-06 12:18:20 - Calculating Repayment start
+2018-06-06 12:18:20 - Calculating Repayment end
+2018-06-06 12:18:33 - Calculating Repayment start
+2018-06-06 12:18:33 - Calculating Repayment end
+2018-06-06 12:18:46 - Populating Loan Type dropdown start
+2018-06-06 12:18:46 - Populating Loan Type dropdown end
+2018-06-06 12:18:46 - Populating Loan period dropdown start
+2018-06-06 12:18:46 - Populating Loan Purpose dropdown start
+2018-06-06 12:18:46 - Populating Loan period dropdown end
+2018-06-06 12:18:46 - Populating Loan purpose dropdown end
+2018-06-06 12:18:56 - Calculating Repayment start
+2018-06-06 12:18:56 - Calculating Repayment end
+2018-06-06 12:23:32 - Populating Loan Type dropdown start
+2018-06-06 12:23:32 - Populating Loan Type dropdown end
+2018-06-06 12:23:32 - Populating Loan Purpose dropdown start
+2018-06-06 12:23:32 - Populating Loan purpose dropdown end
+2018-06-06 12:23:32 - Populating Loan period dropdown start
+2018-06-06 12:23:32 - Populating Loan period dropdown end
+2018-06-06 12:23:54 - Calculating Repayment start
+2018-06-06 12:23:54 - Calculating Repayment end
+2018-06-06 12:25:27 - Populating Loan Type dropdown start
+2018-06-06 12:25:27 - Populating Loan Type dropdown end
+2018-06-06 12:25:27 - Populating Loan Purpose dropdown start
+2018-06-06 12:25:27 - Populating Loan purpose dropdown end
+2018-06-06 12:25:27 - Populating Loan period dropdown start
+2018-06-06 12:25:27 - Populating Loan period dropdown end
+2018-06-06 12:25:32 - Calculating Repayment start
+2018-06-06 12:25:32 - Calculating Repayment end
+2018-06-06 12:28:52 - Populating Loan period dropdown start
+2018-06-06 12:28:52 - Populating Loan period dropdown end
+2018-06-06 12:28:52 - Populating Loan Type dropdown start
+2018-06-06 12:28:52 - Populating Loan Type dropdown end
+2018-06-06 12:28:52 - Populating Loan Purpose dropdown start
+2018-06-06 12:28:52 - Populating Loan purpose dropdown end
+2018-06-06 12:28:57 - Calculating Repayment start
+2018-06-06 12:28:57 - Calculating Repayment end
+2018-06-06 12:31:08 - Populating Loan Type dropdown start
+2018-06-06 12:31:08 - Populating Loan Type dropdown end
+2018-06-06 12:31:08 - Populating Loan period dropdown start
+2018-06-06 12:31:08 - Populating Loan period dropdown end
+2018-06-06 12:31:08 - Populating Loan Purpose dropdown start
+2018-06-06 12:31:08 - Populating Loan purpose dropdown end
+2018-06-06 12:31:14 - Calculating Repayment start
+2018-06-06 12:31:14 - Calculating Repayment end
+2018-06-06 12:37:24 - Populating Loan Purpose dropdown start
+2018-06-06 12:37:24 - Populating Loan purpose dropdown end
+2018-06-06 12:37:24 - Populating Loan period dropdown start
+2018-06-06 12:37:24 - Populating Loan period dropdown end
+2018-06-06 12:37:24 - Populating Loan Type dropdown start
+2018-06-06 12:37:24 - Populating Loan Type dropdown end
+2018-06-06 12:41:33 - Populating Loan Type dropdown start
+2018-06-06 12:41:33 - Populating Loan Type dropdown end
+2018-06-06 12:41:33 - Populating Loan Purpose dropdown start
+2018-06-06 12:41:33 - Populating Loan purpose dropdown end
+2018-06-06 12:41:33 - Populating Loan period dropdown start
+2018-06-06 12:41:33 - Populating Loan period dropdown end
+2018-06-06 12:41:45 - Calculating Repayment start
+2018-06-06 12:41:45 - Calculating Repayment end
+2018-06-06 12:42:24 - Populating Loan Type dropdown start
+2018-06-06 12:42:24 - Populating Loan Type dropdown end
+2018-06-06 12:42:24 - Populating Loan period dropdown start
+2018-06-06 12:42:24 - Populating Loan period dropdown end
+2018-06-06 12:42:24 - Populating Loan Purpose dropdown start
+2018-06-06 12:42:24 - Populating Loan purpose dropdown end
+2018-06-06 12:42:34 - Calculating Repayment start
+2018-06-06 12:42:34 - Calculating Repayment end
+2018-06-06 12:48:52 - Populating Loan Type dropdown start
+2018-06-06 12:48:52 - Populating Loan Type dropdown end
+2018-06-06 12:48:52 - Populating Loan Purpose dropdown start
+2018-06-06 12:48:52 - Populating Loan purpose dropdown end
+2018-06-06 12:48:52 - Populating Loan period dropdown start
+2018-06-06 12:48:52 - Populating Loan period dropdown end
+2018-06-06 12:49:01 - Calculating Repayment start
+2018-06-06 12:49:01 - Calculating Repayment end
+2018-06-06 12:49:38 - Populating Loan Type dropdown start
+2018-06-06 12:49:38 - Populating Loan Type dropdown end
+2018-06-06 12:49:38 - Populating Loan period dropdown start
+2018-06-06 12:49:38 - Populating Loan period dropdown end
+2018-06-06 12:49:38 - Populating Loan Purpose dropdown start
+2018-06-06 12:49:38 - Populating Loan purpose dropdown end
+2018-06-06 12:49:43 - Calculating Repayment start
+2018-06-06 12:49:43 - Calculating Repayment end
+2018-06-06 12:53:02 - Populating Loan Type dropdown start
+2018-06-06 12:53:02 - Populating Loan Type dropdown end
+2018-06-06 12:53:03 - Populating Loan period dropdown start
+2018-06-06 12:53:03 - Populating Loan period dropdown end
+2018-06-06 12:53:03 - Populating Loan Purpose dropdown start
+2018-06-06 12:53:03 - Populating Loan purpose dropdown end
+2018-06-06 12:53:09 - Calculating Repayment start
+2018-06-06 12:53:09 - Calculating Repayment end
+2018-06-06 12:58:56 - Populating Loan Type dropdown start
+2018-06-06 12:58:56 - Populating Loan Type dropdown end
+2018-06-06 12:58:56 - Populating Loan Purpose dropdown start
+2018-06-06 12:58:56 - Populating Loan purpose dropdown end
+2018-06-06 12:58:56 - Populating Loan period dropdown start
+2018-06-06 12:58:56 - Populating Loan period dropdown end
+2018-06-06 12:59:07 - Calculating Repayment start
+2018-06-06 12:59:07 - Calculating Repayment end
+2018-06-06 13:00:42 - Populating Loan Type dropdown start
+2018-06-06 13:00:42 - Populating Loan Type dropdown end
+2018-06-06 13:00:43 - Populating Loan period dropdown start
+2018-06-06 13:00:43 - Populating Loan period dropdown end
+2018-06-06 13:00:43 - Populating Loan Purpose dropdown start
+2018-06-06 13:00:43 - Populating Loan purpose dropdown end
+2018-06-06 13:00:48 - Calculating Repayment start
+2018-06-06 13:00:48 - Calculating Repayment end
+2018-06-06 13:01:43 - Populating Loan Type dropdown start
+2018-06-06 13:01:43 - Populating Loan Type dropdown end
+2018-06-06 13:01:43 - Populating Loan Purpose dropdown start
+2018-06-06 13:01:43 - Populating Loan purpose dropdown end
+2018-06-06 13:01:43 - Populating Loan period dropdown start
+2018-06-06 13:01:43 - Populating Loan period dropdown end
+2018-06-06 13:01:52 - Calculating Repayment start
+2018-06-06 13:01:52 - Calculating Repayment end
+2018-06-06 13:05:17 - Populating Loan Type dropdown start
+2018-06-06 13:05:17 - Populating Loan Type dropdown end
+2018-06-06 13:05:18 - Populating Loan period dropdown start
+2018-06-06 13:05:18 - Populating Loan period dropdown end
+2018-06-06 13:05:18 - Populating Loan Purpose dropdown start
+2018-06-06 13:05:18 - Populating Loan purpose dropdown end
+2018-06-06 13:05:19 - Calculating Repayment start
+2018-06-06 13:05:19 - Calculating Repayment end
+2018-06-06 13:08:35 - Populating Loan Type dropdown start
+2018-06-06 13:08:35 - Populating Loan Type dropdown end
+2018-06-06 13:08:35 - Populating Loan period dropdown start
+2018-06-06 13:08:35 - Populating Loan period dropdown end
+2018-06-06 13:08:35 - Populating Loan Purpose dropdown start
+2018-06-06 13:08:35 - Populating Loan purpose dropdown end
+2018-06-06 13:08:37 - Calculating Repayment start
+2018-06-06 13:08:37 - Calculating Repayment end
+2018-06-06 13:09:49 - Populating Loan Type dropdown start
+2018-06-06 13:09:49 - Populating Loan Type dropdown end
+2018-06-06 13:09:49 - Populating Loan Purpose dropdown start
+2018-06-06 13:09:49 - Populating Loan purpose dropdown end
+2018-06-06 13:09:49 - Populating Loan period dropdown start
+2018-06-06 13:09:49 - Populating Loan period dropdown end
+2018-06-06 13:09:51 - Calculating Repayment start
+2018-06-06 13:09:51 - Calculating Repayment end
+2018-06-06 15:16:18 - Starting RepayCalControllerTest on Divya-PC with PID 9440 (started by Divya in E:\MyWorkSpace\repay-calculator)
+2018-06-06 15:16:18 - Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-06-06 15:16:18 - No active profile set, falling back to default profiles: default
+2018-06-06 15:16:18 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@9cb8225: startup date [Wed Jun 06 15:16:18 IST 2018]; root of context hierarchy
+2018-06-06 15:16:23 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 15:16:23 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@9cb8225: startup date [Wed Jun 06 15:16:18 IST 2018]; root of context hierarchy
+2018-06-06 15:16:23 - Mapped "{[/api/repay/loanPurpose],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPurposeDropDown()
+2018-06-06 15:16:23 - Mapped "{[/api/repay/calculate],methods=[POST]}" onto public com.suncorp.repaycalculator.response.RepayCalcResponse com.suncorp.repaycalculator.controller.RepayCalController.calculateRepayment(com.suncorp.repaycalculator.request.RepayCalcRequest)
+2018-06-06 15:16:23 - Mapped "{[/api/repay/loanPeriod],methods=[GET]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPeriodDropDown()
+2018-06-06 15:16:23 - Mapped "{[/api/repay/loanTypes],methods=[GET]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanTypeDropDown()
+2018-06-06 15:16:23 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 15:16:23 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 15:16:23 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 15:16:23 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 15:16:24 - Initializing Spring FrameworkServlet ''
+2018-06-06 15:16:24 - FrameworkServlet '': initialization started
+2018-06-06 15:16:24 - FrameworkServlet '': initialization completed in 16 ms
+2018-06-06 15:16:24 - Started RepayCalControllerTest in 8.14 seconds (JVM running for 14.046)
+2018-06-06 15:16:24 - Closing org.springframework.web.context.support.GenericWebApplicationContext@9cb8225: startup date [Wed Jun 06 15:16:18 IST 2018]; root of context hierarchy
+2018-06-06 16:03:37 - Starting RepayCalculatorApplication on Divya-PC with PID 5964 (E:\MyWorkSpace\repay-calculator\target\classes started by Divya in E:\MyWorkSpace\repay-calculator)
+2018-06-06 16:03:37 - Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-06-06 16:03:37 - No active profile set, falling back to default profiles: default
+2018-06-06 16:03:38 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1725dc0f: startup date [Wed Jun 06 16:03:38 IST 2018]; root of context hierarchy
+2018-06-06 16:03:47 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$294588ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 16:03:49 - Tomcat initialized with port(s): 8080 (http)
+2018-06-06 16:03:49 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-06 16:03:49 - Starting service [Tomcat]
+2018-06-06 16:03:49 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-06 16:03:49 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Divya\AppData\Roaming\Cloud Foundry;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Divya\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Java\jdk1.8.0_161\jre\lib;C:\Users\Divya\AppData\Roaming\npm;;C:\Program Files\Microsoft VS Code\bin;.]
+2018-06-06 16:03:50 - Initializing Spring embedded WebApplicationContext
+2018-06-06 16:03:50 - Root WebApplicationContext: initialization completed in 11655 ms
+2018-06-06 16:03:50 - Servlet dispatcherServlet mapped to [/]
+2018-06-06 16:03:50 - Servlet webServlet mapped to [/h2-console/*]
+2018-06-06 16:03:50 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 16:03:50 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 16:03:50 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 16:03:50 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 16:03:51 - HikariPool-1 - Starting...
+2018-06-06 16:03:51 - HikariPool-1 - Start completed.
+2018-06-06 16:03:52 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:03:52 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-06 16:03:52 - HHH000412: Hibernate Core {5.2.17.Final}
+2018-06-06 16:03:52 - HHH000206: hibernate.properties not found
+2018-06-06 16:03:52 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-06 16:03:53 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-06-06 16:03:54 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6f76c2cc'
+2018-06-06 16:03:54 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:03:55 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 16:03:55 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1725dc0f: startup date [Wed Jun 06 16:03:38 IST 2018]; root of context hierarchy
+2018-06-06 16:03:55 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-06-06 16:03:55 - Mapped "{[/api/repay/loanTypes],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanTypeDropDown()
+2018-06-06 16:03:55 - Mapped "{[/api/repay/loanPurpose],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPurposeDropDown()
+2018-06-06 16:03:55 - Mapped "{[/api/repay/loanPeriod],methods=[GET]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPeriodDropDown()
+2018-06-06 16:03:55 - Mapped "{[/api/repay/calculate],methods=[POST]}" onto public com.suncorp.repaycalculator.response.RepayCalcResponse com.suncorp.repaycalculator.controller.RepayCalController.calculateRepayment(com.suncorp.repaycalculator.request.RepayCalcRequest)
+2018-06-06 16:03:55 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 16:03:55 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 16:03:55 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 16:03:55 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 16:03:56 - Registering beans for JMX exposure on startup
+2018-06-06 16:03:56 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-06 16:03:56 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-06-06 16:03:56 - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-06 16:03:56 - Using a shared selector for servlet write/read
+2018-06-06 16:03:56 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-06-06 16:03:56 - Started RepayCalculatorApplication in 31.061 seconds (JVM running for 33.505)
+2018-06-06 16:04:50 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-06 16:04:50 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-06 16:04:50 - FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2018-06-06 16:20:03 - Starting RepayCalculatorApplication on Divya-PC with PID 9612 (E:\MyWorkSpace\repay-calculator\target\classes started by Divya in E:\MyWorkSpace\repay-calculator)
+2018-06-06 16:20:03 - Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-06-06 16:20:03 - No active profile set, falling back to default profiles: default
+2018-06-06 16:20:03 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@130161f7: startup date [Wed Jun 06 16:20:03 IST 2018]; root of context hierarchy
+2018-06-06 16:20:05 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$548e756c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 16:20:05 - Tomcat initialized with port(s): 8080 (http)
+2018-06-06 16:20:05 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-06 16:20:05 - Starting service [Tomcat]
+2018-06-06 16:20:05 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-06 16:20:05 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Divya\AppData\Roaming\Cloud Foundry;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Divya\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Java\jdk1.8.0_161\jre\lib;C:\Users\Divya\AppData\Roaming\npm;;C:\Program Files\Microsoft VS Code\bin;.]
+2018-06-06 16:20:05 - Initializing Spring embedded WebApplicationContext
+2018-06-06 16:20:05 - Root WebApplicationContext: initialization completed in 2289 ms
+2018-06-06 16:20:06 - Servlet dispatcherServlet mapped to [/]
+2018-06-06 16:20:06 - Servlet webServlet mapped to [/h2-console/*]
+2018-06-06 16:20:06 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 16:20:06 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 16:20:06 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 16:20:06 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 16:20:06 - HikariPool-1 - Starting...
+2018-06-06 16:20:06 - HikariPool-1 - Start completed.
+2018-06-06 16:20:06 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:20:06 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-06 16:20:06 - HHH000412: Hibernate Core {5.2.17.Final}
+2018-06-06 16:20:06 - HHH000206: hibernate.properties not found
+2018-06-06 16:20:06 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-06 16:20:06 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-06-06 16:20:07 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@44784e2f'
+2018-06-06 16:20:07 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:20:07 - Executing SQL script from URL [file:/E:/MyWorkSpace/repay-calculator/target/classes/data.sql]
+2018-06-06 16:20:07 - Executed SQL script from URL [file:/E:/MyWorkSpace/repay-calculator/target/classes/data.sql] in 16 ms.
+2018-06-06 16:20:07 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 16:20:07 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@130161f7: startup date [Wed Jun 06 16:20:03 IST 2018]; root of context hierarchy
+2018-06-06 16:20:07 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-06-06 16:20:07 - Mapped "{[/api/repay/calculate],methods=[POST]}" onto public com.suncorp.repaycalculator.response.RepayCalcResponse com.suncorp.repaycalculator.controller.RepayCalController.calculateRepayment(com.suncorp.repaycalculator.request.RepayCalcRequest)
+2018-06-06 16:20:07 - Mapped "{[/api/repay/loanTypes],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanTypeDropDown()
+2018-06-06 16:20:07 - Mapped "{[/api/repay/loanPeriod],methods=[GET]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPeriodDropDown()
+2018-06-06 16:20:07 - Mapped "{[/api/repay/loanPurpose],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPurposeDropDown()
+2018-06-06 16:20:07 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 16:20:07 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 16:20:07 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 16:20:07 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 16:20:08 - Registering beans for JMX exposure on startup
+2018-06-06 16:20:08 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-06 16:20:08 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-06-06 16:20:08 - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-06 16:20:08 - Using a shared selector for servlet write/read
+2018-06-06 16:20:08 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-06-06 16:20:08 - Started RepayCalculatorApplication in 5.606 seconds (JVM running for 6.845)
+2018-06-06 16:47:23 - Starting RepayCalculatorApplication on Divya-PC with PID 8180 (E:\MyWorkSpace\repay-calculator\target\classes started by Divya in E:\MyWorkSpace\repay-calculator)
+2018-06-06 16:47:23 - Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-06-06 16:47:23 - No active profile set, falling back to default profiles: default
+2018-06-06 16:47:23 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@56620197: startup date [Wed Jun 06 16:47:23 IST 2018]; root of context hierarchy
+2018-06-06 16:47:26 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5e544cab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 16:47:29 - Tomcat initialized with port(s): 8080 (http)
+2018-06-06 16:47:29 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-06 16:47:29 - Starting service [Tomcat]
+2018-06-06 16:47:29 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-06 16:47:29 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Divya\AppData\Roaming\Cloud Foundry;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Divya\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Java\jdk1.8.0_161\jre\lib;C:\Users\Divya\AppData\Roaming\npm;;C:\Program Files\Microsoft VS Code\bin;.]
+2018-06-06 16:47:30 - Initializing Spring embedded WebApplicationContext
+2018-06-06 16:47:30 - Root WebApplicationContext: initialization completed in 7066 ms
+2018-06-06 16:47:31 - Servlet dispatcherServlet mapped to [/]
+2018-06-06 16:47:31 - Servlet webServlet mapped to [/h2-console/*]
+2018-06-06 16:47:31 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 16:47:31 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 16:47:31 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 16:47:31 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 16:47:32 - HikariPool-1 - Starting...
+2018-06-06 16:47:32 - HikariPool-1 - Start completed.
+2018-06-06 16:47:33 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:47:33 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-06 16:47:33 - HHH000412: Hibernate Core {5.2.17.Final}
+2018-06-06 16:47:33 - HHH000206: hibernate.properties not found
+2018-06-06 16:47:33 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-06 16:47:34 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-06-06 16:47:37 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@630b6190'
+2018-06-06 16:47:37 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:47:37 - Executing SQL script from URL [file:/E:/MyWorkSpace/repay-calculator/target/classes/data.sql]
+2018-06-06 16:47:37 - Executed SQL script from URL [file:/E:/MyWorkSpace/repay-calculator/target/classes/data.sql] in 8 ms.
+2018-06-06 16:47:39 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'repayCalController': Unsatisfied dependency expressed through field 'repayCalService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'repayCalServiceImpl': Unsatisfied dependency expressed through field 'repayCalcDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'repayCalcDaoImpl': Unsatisfied dependency expressed through field 'commonCodeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commonCodeRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.suncorp.repaycalculator.repository.CommonCodeRepository.getCommonCodesByCodeType(java.lang.String)! No property type found for type String! Traversed path: CommonCode.code.
+2018-06-06 16:47:39 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:47:39 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-06-06 16:47:39 - HikariPool-1 - Shutdown initiated...
+2018-06-06 16:47:39 - HikariPool-1 - Shutdown completed.
+2018-06-06 16:47:39 - Stopping service [Tomcat]
+2018-06-06 16:47:39 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-06-06 16:47:39 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'repayCalController': Unsatisfied dependency expressed through field 'repayCalService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'repayCalServiceImpl': Unsatisfied dependency expressed through field 'repayCalcDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'repayCalcDaoImpl': Unsatisfied dependency expressed through field 'commonCodeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commonCodeRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.suncorp.repaycalculator.repository.CommonCodeRepository.getCommonCodesByCodeType(java.lang.String)! No property type found for type String! Traversed path: CommonCode.code.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.suncorp.repaycalculator.RepayCalculatorApplication.main(RepayCalculatorApplication.java:14)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'repayCalServiceImpl': Unsatisfied dependency expressed through field 'repayCalcDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'repayCalcDaoImpl': Unsatisfied dependency expressed through field 'commonCodeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commonCodeRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.suncorp.repaycalculator.repository.CommonCodeRepository.getCommonCodesByCodeType(java.lang.String)! No property type found for type String! Traversed path: CommonCode.code.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'repayCalcDaoImpl': Unsatisfied dependency expressed through field 'commonCodeRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commonCodeRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.suncorp.repaycalculator.repository.CommonCodeRepository.getCommonCodesByCodeType(java.lang.String)! No property type found for type String! Traversed path: CommonCode.code.
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1348)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commonCodeRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.suncorp.repaycalculator.repository.CommonCodeRepository.getCommonCodesByCodeType(java.lang.String)! No property type found for type String! Traversed path: CommonCode.code.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1706)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:579)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	... 45 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.suncorp.repaycalculator.repository.CommonCodeRepository.getCommonCodesByCodeType(java.lang.String)! No property type found for type String! Traversed path: CommonCode.code.
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:82)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:103)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:208)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:553)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:546)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Iterator.forEachRemaining(Iterator.java:116)
+	at java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1049)
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:548)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:538)
+	at java.util.Optional.map(Optional.java:215)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:538)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:317)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$3(RepositoryFactoryBeanSupport.java:287)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:141)
+	at org.springframework.data.util.Lazy.get(Lazy.java:63)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:290)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1765)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1702)
+	... 55 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property type found for type String! Traversed path: CommonCode.code.
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:92)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:356)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:332)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:366)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:390)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:332)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:285)
+	at java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:324)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:267)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:250)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:250)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:251)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:380)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:381)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:96)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:76)
+	... 81 common frames omitted
+2018-06-06 16:51:12 - Starting RepayCalculatorApplication on Divya-PC with PID 8308 (E:\MyWorkSpace\repay-calculator\target\classes started by Divya in E:\MyWorkSpace\repay-calculator)
+2018-06-06 16:51:12 - Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-06-06 16:51:12 - No active profile set, falling back to default profiles: default
+2018-06-06 16:51:12 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35ef1869: startup date [Wed Jun 06 16:51:12 IST 2018]; root of context hierarchy
+2018-06-06 16:51:14 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fb8822d7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 16:51:14 - Tomcat initialized with port(s): 8080 (http)
+2018-06-06 16:51:14 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-06 16:51:14 - Starting service [Tomcat]
+2018-06-06 16:51:14 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-06 16:51:14 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Divya\AppData\Roaming\Cloud Foundry;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Divya\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Java\jdk1.8.0_161\jre\lib;C:\Users\Divya\AppData\Roaming\npm;;C:\Program Files\Microsoft VS Code\bin;.]
+2018-06-06 16:51:15 - Initializing Spring embedded WebApplicationContext
+2018-06-06 16:51:15 - Root WebApplicationContext: initialization completed in 2426 ms
+2018-06-06 16:51:15 - Servlet dispatcherServlet mapped to [/]
+2018-06-06 16:51:15 - Servlet webServlet mapped to [/h2-console/*]
+2018-06-06 16:51:15 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 16:51:15 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 16:51:15 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 16:51:15 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 16:51:15 - HikariPool-1 - Starting...
+2018-06-06 16:51:15 - HikariPool-1 - Start completed.
+2018-06-06 16:51:15 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:51:15 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-06 16:51:15 - HHH000412: Hibernate Core {5.2.17.Final}
+2018-06-06 16:51:15 - HHH000206: hibernate.properties not found
+2018-06-06 16:51:15 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-06 16:51:16 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-06-06 16:51:16 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@65e0b505'
+2018-06-06 16:51:16 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:51:16 - Executing SQL script from URL [file:/E:/MyWorkSpace/repay-calculator/target/classes/data.sql]
+2018-06-06 16:51:16 - Executed SQL script from URL [file:/E:/MyWorkSpace/repay-calculator/target/classes/data.sql] in 16 ms.
+2018-06-06 16:51:17 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'repayCalController': Unsatisfied dependency expressed through field 'repayCalService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'repayCalServiceImpl': Unsatisfied dependency expressed through field 'modelMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.modelmapper.ModelMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-06-06 16:51:17 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:51:17 - HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-06-06 16:51:17 - HikariPool-1 - Shutdown initiated...
+2018-06-06 16:51:17 - HikariPool-1 - Shutdown completed.
+2018-06-06 16:51:17 - Stopping service [Tomcat]
+2018-06-06 16:51:17 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-06-06 16:51:17 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field modelMapper in com.suncorp.repaycalculator.service.RepayCalServiceImpl required a bean of type 'org.modelmapper.ModelMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.modelmapper.ModelMapper' in your configuration.
+
+2018-06-06 16:53:11 - Starting RepayCalculatorApplication on Divya-PC with PID 10308 (E:\MyWorkSpace\repay-calculator\target\classes started by Divya in E:\MyWorkSpace\repay-calculator)
+2018-06-06 16:53:11 - Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-06-06 16:53:11 - No active profile set, falling back to default profiles: default
+2018-06-06 16:53:11 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2b662a77: startup date [Wed Jun 06 16:53:11 IST 2018]; root of context hierarchy
+2018-06-06 16:53:13 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$da37ab69] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 16:53:13 - Tomcat initialized with port(s): 8080 (http)
+2018-06-06 16:53:13 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-06 16:53:13 - Starting service [Tomcat]
+2018-06-06 16:53:13 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-06 16:53:13 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Divya\AppData\Roaming\Cloud Foundry;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Divya\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Java\jdk1.8.0_161\jre\lib;C:\Users\Divya\AppData\Roaming\npm;;C:\Program Files\Microsoft VS Code\bin;.]
+2018-06-06 16:53:13 - Initializing Spring embedded WebApplicationContext
+2018-06-06 16:53:13 - Root WebApplicationContext: initialization completed in 1772 ms
+2018-06-06 16:53:13 - Servlet dispatcherServlet mapped to [/]
+2018-06-06 16:53:13 - Servlet webServlet mapped to [/h2-console/*]
+2018-06-06 16:53:13 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 16:53:13 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 16:53:13 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 16:53:13 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 16:53:14 - HikariPool-1 - Starting...
+2018-06-06 16:53:14 - HikariPool-1 - Start completed.
+2018-06-06 16:53:14 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:53:14 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-06 16:53:14 - HHH000412: Hibernate Core {5.2.17.Final}
+2018-06-06 16:53:14 - HHH000206: hibernate.properties not found
+2018-06-06 16:53:14 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-06 16:53:14 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-06-06 16:53:15 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@123d7057'
+2018-06-06 16:53:15 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:53:15 - Executing SQL script from URL [file:/E:/MyWorkSpace/repay-calculator/target/classes/data.sql]
+2018-06-06 16:53:15 - Executed SQL script from URL [file:/E:/MyWorkSpace/repay-calculator/target/classes/data.sql] in 15 ms.
+2018-06-06 16:53:15 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 16:53:16 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2b662a77: startup date [Wed Jun 06 16:53:11 IST 2018]; root of context hierarchy
+2018-06-06 16:53:16 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-06-06 16:53:16 - Mapped "{[/api/repay/loanTypes],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanTypeDropDown()
+2018-06-06 16:53:16 - Mapped "{[/api/repay/loanPurpose],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPurposeDropDown()
+2018-06-06 16:53:16 - Mapped "{[/api/repay/calculate],methods=[POST]}" onto public com.suncorp.repaycalculator.response.RepayCalcResponse com.suncorp.repaycalculator.controller.RepayCalController.calculateRepayment(com.suncorp.repaycalculator.request.RepayCalcRequest)
+2018-06-06 16:53:16 - Mapped "{[/api/repay/loanPeriod],methods=[GET]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPeriodDropDown()
+2018-06-06 16:53:16 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 16:53:16 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 16:53:16 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 16:53:16 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 16:53:16 - Registering beans for JMX exposure on startup
+2018-06-06 16:53:16 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-06 16:53:16 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-06-06 16:53:16 - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-06 16:53:16 - Using a shared selector for servlet write/read
+2018-06-06 16:53:16 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-06-06 16:53:16 - Started RepayCalculatorApplication in 6.027 seconds (JVM running for 8.393)
+2018-06-06 16:53:57 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-06 16:53:57 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-06 16:53:58 - FrameworkServlet 'dispatcherServlet': initialization completed in 126 ms
+2018-06-06 16:53:58 - Populating Loan Purpose dropdown start
+2018-06-06 16:53:58 - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-06 16:57:06 - Starting RepayCalculatorApplication on Divya-PC with PID 3100 (E:\MyWorkSpace\repay-calculator\target\classes started by Divya in E:\MyWorkSpace\repay-calculator)
+2018-06-06 16:57:06 - Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-06-06 16:57:06 - No active profile set, falling back to default profiles: default
+2018-06-06 16:57:06 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@15eb5ee5: startup date [Wed Jun 06 16:57:06 IST 2018]; root of context hierarchy
+2018-06-06 16:57:08 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4edaca7d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 16:57:09 - Tomcat initialized with port(s): 8080 (http)
+2018-06-06 16:57:09 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-06 16:57:09 - Starting service [Tomcat]
+2018-06-06 16:57:09 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-06 16:57:09 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Divya\AppData\Roaming\Cloud Foundry;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Divya\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Java\jdk1.8.0_161\jre\lib;C:\Users\Divya\AppData\Roaming\npm;;C:\Program Files\Microsoft VS Code\bin;.]
+2018-06-06 16:57:09 - Initializing Spring embedded WebApplicationContext
+2018-06-06 16:57:09 - Root WebApplicationContext: initialization completed in 3378 ms
+2018-06-06 16:57:09 - Servlet dispatcherServlet mapped to [/]
+2018-06-06 16:57:09 - Servlet webServlet mapped to [/h2-console/*]
+2018-06-06 16:57:09 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 16:57:09 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 16:57:09 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 16:57:09 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 16:57:09 - HikariPool-1 - Starting...
+2018-06-06 16:57:10 - HikariPool-1 - Start completed.
+2018-06-06 16:57:10 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:57:10 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-06 16:57:10 - HHH000412: Hibernate Core {5.2.17.Final}
+2018-06-06 16:57:10 - HHH000206: hibernate.properties not found
+2018-06-06 16:57:10 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-06 16:57:10 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-06-06 16:57:10 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6d0b0da6'
+2018-06-06 16:57:10 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 16:57:11 - Executing SQL script from URL [file:/E:/MyWorkSpace/repay-calculator/target/classes/data.sql]
+2018-06-06 16:57:11 - Executed SQL script from URL [file:/E:/MyWorkSpace/repay-calculator/target/classes/data.sql] in 6 ms.
+2018-06-06 16:57:11 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 16:57:11 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@15eb5ee5: startup date [Wed Jun 06 16:57:06 IST 2018]; root of context hierarchy
+2018-06-06 16:57:11 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-06-06 16:57:11 - Mapped "{[/api/repay/calculate],methods=[POST]}" onto public com.suncorp.repaycalculator.response.RepayCalcResponse com.suncorp.repaycalculator.controller.RepayCalController.calculateRepayment(com.suncorp.repaycalculator.request.RepayCalcRequest)
+2018-06-06 16:57:11 - Mapped "{[/api/repay/loanPurpose],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPurposeDropDown()
+2018-06-06 16:57:11 - Mapped "{[/api/repay/loanTypes],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanTypeDropDown()
+2018-06-06 16:57:11 - Mapped "{[/api/repay/loanPeriod],methods=[GET]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPeriodDropDown()
+2018-06-06 16:57:11 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 16:57:11 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 16:57:11 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 16:57:11 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 16:57:12 - Registering beans for JMX exposure on startup
+2018-06-06 16:57:12 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-06 16:57:12 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-06-06 16:57:12 - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-06 16:57:12 - Using a shared selector for servlet write/read
+2018-06-06 16:57:12 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-06-06 16:57:12 - Started RepayCalculatorApplication in 6.825 seconds (JVM running for 8.466)
+2018-06-06 17:09:51 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-06 17:09:51 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-06 17:09:51 - FrameworkServlet 'dispatcherServlet': initialization completed in 55 ms
+2018-06-06 17:09:51 - Populating Loan period dropdown start
+2018-06-06 17:09:51 - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-06 17:09:52 - Populating Loan period dropdown end
+2018-06-06 17:09:56 - Populating Loan Type dropdown start
+2018-06-06 17:09:56 - Populating Loan Type dropdown end
+2018-06-06 17:35:44 - Starting RepayCalculatorApplication on Divya-PC with PID 1344 (E:\MyWorkSpace\repay-calculator\target\classes started by Divya in E:\MyWorkSpace\repay-calculator)
+2018-06-06 17:35:44 - Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-06-06 17:35:44 - No active profile set, falling back to default profiles: default
+2018-06-06 17:35:44 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ac3c60d: startup date [Wed Jun 06 17:35:44 IST 2018]; root of context hierarchy
+2018-06-06 17:35:47 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1d1c6d67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-06 17:35:47 - Tomcat initialized with port(s): 8080 (http)
+2018-06-06 17:35:47 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-06 17:35:47 - Starting service [Tomcat]
+2018-06-06 17:35:47 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-06 17:35:47 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Divya\AppData\Roaming\Cloud Foundry;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Divya\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Java\jdk1.8.0_161\jre\lib;C:\Users\Divya\AppData\Roaming\npm;;C:\Program Files\Microsoft VS Code\bin;.]
+2018-06-06 17:35:48 - Initializing Spring embedded WebApplicationContext
+2018-06-06 17:35:48 - Root WebApplicationContext: initialization completed in 3080 ms
+2018-06-06 17:35:48 - Servlet dispatcherServlet mapped to [/]
+2018-06-06 17:35:48 - Servlet webServlet mapped to [/h2-console/*]
+2018-06-06 17:35:48 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-06 17:35:48 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-06 17:35:48 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-06 17:35:48 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-06 17:35:48 - HikariPool-1 - Starting...
+2018-06-06 17:35:48 - HikariPool-1 - Start completed.
+2018-06-06 17:35:48 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-06 17:35:48 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-06 17:35:49 - HHH000412: Hibernate Core {5.2.17.Final}
+2018-06-06 17:35:49 - HHH000206: hibernate.properties not found
+2018-06-06 17:35:49 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-06 17:35:49 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-06-06 17:35:50 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@24eb65e3'
+2018-06-06 17:35:50 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-06 17:35:50 - Executing SQL script from URL [file:/E:/MyWorkSpace/repay-calculator/target/classes/data.sql]
+2018-06-06 17:35:50 - Executed SQL script from URL [file:/E:/MyWorkSpace/repay-calculator/target/classes/data.sql] in 6 ms.
+2018-06-06 17:35:51 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 17:35:51 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ac3c60d: startup date [Wed Jun 06 17:35:44 IST 2018]; root of context hierarchy
+2018-06-06 17:35:51 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-06-06 17:35:52 - Mapped "{[/api/repay/loanPeriod],methods=[GET]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPeriodDropDown()
+2018-06-06 17:35:52 - Mapped "{[/api/repay/calculate],methods=[POST]}" onto public com.suncorp.repaycalculator.response.RepayCalcResponse com.suncorp.repaycalculator.controller.RepayCalController.calculateRepayment(com.suncorp.repaycalculator.request.RepayCalcRequest)
+2018-06-06 17:35:52 - Mapped "{[/api/repay/loanTypes],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanTypeDropDown()
+2018-06-06 17:35:52 - Mapped "{[/api/repay/loanPurpose],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPurposeDropDown()
+2018-06-06 17:35:52 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-06 17:35:52 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-06 17:35:52 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 17:35:52 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-06 17:35:52 - Registering beans for JMX exposure on startup
+2018-06-06 17:35:52 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-06 17:35:52 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-06-06 17:35:52 - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-06 17:35:52 - Using a shared selector for servlet write/read
+2018-06-06 17:35:52 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-06-06 17:35:52 - Started RepayCalculatorApplication in 8.789 seconds (JVM running for 11.762)
+2018-06-06 17:36:31 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-06 17:36:31 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-06 17:36:31 - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2018-06-06 17:36:31 - Populating Loan period dropdown start
+2018-06-06 17:36:31 - HHH000397: Using ASTQueryTranslatorFactory
+2018-06-06 17:36:31 - Populating Loan period dropdown end
+2018-06-06 17:36:34 - Populating Loan Purpose dropdown start
+2018-06-06 17:36:34 - Populating Loan Purpose dropdown end
+2018-06-06 17:36:38 - Populating Loan Type dropdown start
+2018-06-06 17:36:38 - Populating Loan Type dropdown end
+2018-06-06 17:36:40 - Calculating Repayment start
+2018-06-06 17:36:41 - Calculating Repayment end
+2018-06-06 17:40:47 - Populating Loan Type dropdown start
+2018-06-06 17:40:47 - Populating Loan Type dropdown end
+2018-06-06 17:40:47 - Populating Loan Purpose dropdown start
+2018-06-06 17:40:47 - Populating Loan Purpose dropdown end
+2018-06-06 17:40:47 - Populating Loan period dropdown start
+2018-06-06 17:40:47 - Populating Loan period dropdown end
+2018-06-06 17:41:34 - Calculating Repayment start
+2018-06-06 17:41:34 - Calculating Repayment end
+2018-06-06 17:46:42 - Populating Loan Type dropdown start
+2018-06-06 17:46:42 - Populating Loan Type dropdown end
+2018-06-06 17:46:42 - Populating Loan Purpose dropdown start
+2018-06-06 17:46:42 - Populating Loan Purpose dropdown end
+2018-06-06 17:46:42 - Populating Loan period dropdown start
+2018-06-06 17:46:42 - Populating Loan period dropdown end
+2018-06-06 17:47:26 - Populating Loan Type dropdown start
+2018-06-06 17:47:26 - Populating Loan Type dropdown end
+2018-06-06 17:47:26 - Populating Loan Purpose dropdown start
+2018-06-06 17:47:26 - Populating Loan Purpose dropdown end
+2018-06-06 17:47:26 - Populating Loan period dropdown start
+2018-06-06 17:47:26 - Populating Loan period dropdown end
+2018-06-06 17:47:37 - Calculating Repayment start
+2018-06-06 17:47:37 - Calculating Repayment end
+2018-06-06 17:48:03 - Populating Loan Type dropdown start
+2018-06-06 17:48:03 - Populating Loan Purpose dropdown start
+2018-06-06 17:48:03 - Populating Loan Purpose dropdown end
+2018-06-06 17:48:03 - Populating Loan Type dropdown end
+2018-06-06 17:48:03 - Populating Loan period dropdown start
+2018-06-06 17:48:03 - Populating Loan period dropdown end
+2018-06-06 17:48:06 - Calculating Repayment start
+2018-06-06 17:48:06 - Calculating Repayment end
+2018-06-06 17:48:40 - Populating Loan Type dropdown start
+2018-06-06 17:48:40 - Populating Loan Type dropdown end
+2018-06-06 17:48:40 - Populating Loan Purpose dropdown start
+2018-06-06 17:48:40 - Populating Loan Purpose dropdown end
+2018-06-06 17:48:40 - Populating Loan period dropdown start
+2018-06-06 17:48:40 - Populating Loan period dropdown end
+2018-06-06 17:48:45 - Calculating Repayment start
+2018-06-06 17:48:45 - Calculating Repayment end
+2018-06-06 17:49:18 - Populating Loan Type dropdown start
+2018-06-06 17:49:18 - Populating Loan Type dropdown end
+2018-06-06 17:49:18 - Populating Loan Purpose dropdown start
+2018-06-06 17:49:18 - Populating Loan period dropdown start
+2018-06-06 17:49:18 - Populating Loan period dropdown end
+2018-06-06 17:49:18 - Populating Loan Purpose dropdown end
+2018-06-06 17:49:22 - Calculating Repayment start
+2018-06-06 17:49:22 - Calculating Repayment end
+2018-06-06 17:49:50 - Populating Loan Type dropdown start
+2018-06-06 17:49:50 - Populating Loan Purpose dropdown start
+2018-06-06 17:49:50 - Populating Loan period dropdown start
+2018-06-06 17:49:50 - Populating Loan Type dropdown end
+2018-06-06 17:49:50 - Populating Loan period dropdown end
+2018-06-06 17:49:50 - Populating Loan Purpose dropdown end
+2018-06-06 17:49:55 - Calculating Repayment start
+2018-06-06 17:49:55 - Calculating Repayment end
+2018-06-06 17:50:17 - Populating Loan Type dropdown start
+2018-06-06 17:50:17 - Populating Loan Type dropdown end
+2018-06-06 17:50:17 - Populating Loan Purpose dropdown start
+2018-06-06 17:50:17 - Populating Loan Purpose dropdown end
+2018-06-06 17:50:17 - Populating Loan period dropdown start
+2018-06-06 17:50:17 - Populating Loan period dropdown end
+2018-06-06 17:50:27 - Populating Loan Type dropdown start
+2018-06-06 17:50:27 - Populating Loan Type dropdown end
+2018-06-06 17:50:27 - Populating Loan Purpose dropdown start
+2018-06-06 17:50:27 - Populating Loan Purpose dropdown end
+2018-06-06 17:50:27 - Populating Loan period dropdown start
+2018-06-06 17:50:27 - Populating Loan period dropdown end
+2018-06-06 17:54:16 - Populating Loan Type dropdown start
+2018-06-06 17:54:16 - Populating Loan Type dropdown end
+2018-06-06 17:54:16 - Populating Loan Purpose dropdown start
+2018-06-06 17:54:16 - Populating Loan Purpose dropdown end
+2018-06-06 17:54:16 - Populating Loan period dropdown start
+2018-06-06 17:54:16 - Populating Loan period dropdown end
+2018-06-06 17:54:31 - Calculating Repayment start
+2018-06-06 17:54:31 - Calculating Repayment end
+2018-06-06 17:58:16 - Populating Loan Type dropdown start
+2018-06-06 17:58:16 - Populating Loan Type dropdown end
+2018-06-06 17:58:16 - Populating Loan Purpose dropdown start
+2018-06-06 17:58:16 - Populating Loan Purpose dropdown end
+2018-06-06 17:58:16 - Populating Loan period dropdown start
+2018-06-06 17:58:16 - Populating Loan period dropdown end
+2018-06-06 17:58:23 - Calculating Repayment start
+2018-06-06 17:58:23 - Calculating Repayment end
+2018-06-06 17:58:39 - Calculating Repayment start
+2018-06-06 17:58:39 - Calculating Repayment end
+2018-06-06 17:59:17 - Populating Loan Type dropdown start
+2018-06-06 17:59:17 - Populating Loan Type dropdown end
+2018-06-06 17:59:17 - Populating Loan period dropdown start
+2018-06-06 17:59:17 - Populating Loan Purpose dropdown start
+2018-06-06 17:59:17 - Populating Loan period dropdown end
+2018-06-06 17:59:17 - Populating Loan Purpose dropdown end
+2018-06-06 17:59:24 - Calculating Repayment start
+2018-06-06 17:59:24 - Calculating Repayment end

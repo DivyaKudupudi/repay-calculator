@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author Divya
+ */
 public interface RepayCalService {
     RepayCalcResponse calculateRepayment(RepayCalcRequest repayCalcRequest);
     List<CommonCodeMapBean> getLoanPeriodDropDown(String code);

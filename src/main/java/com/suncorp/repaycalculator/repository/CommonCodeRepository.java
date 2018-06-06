@@ -2,13 +2,16 @@ package com.suncorp.repaycalculator.repository;
 
 import com.suncorp.repaycalculator.Entity.CommonCode;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * @author Divya
  * @description Repository to access the database tables data
  */
-@Repository
-public interface RepayCalcRepository {
 
+@Transactional
+public interface CommonCodeRepository extends JpaRepository<CommonCode, Long> {
+    public List<CommonCode> getCommonCodesByCodeType(String codeType);
 }

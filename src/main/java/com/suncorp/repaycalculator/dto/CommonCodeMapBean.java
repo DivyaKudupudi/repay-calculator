@@ -2,6 +2,9 @@ package com.suncorp.repaycalculator.dto;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Divya
+ */
 @Component
 public class CommonCodeMapBean {
 

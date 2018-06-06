@@ -2,6 +2,9 @@ package com.suncorp.repaycalculator.request;
 
 import java.math.BigInteger;
 
+/**
+ * @author Divya
+ */
 public class LoanPeriod {
     private BigInteger period;
     private String periodType;

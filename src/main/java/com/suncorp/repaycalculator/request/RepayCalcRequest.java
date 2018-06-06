@@ -1,5 +1,8 @@
 package com.suncorp.repaycalculator.request;
 
+/**
+ * @author Divya
+ */
 public class RepayCalcRequest {
 
     private String loanPurpose;

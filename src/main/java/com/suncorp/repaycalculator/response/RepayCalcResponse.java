@@ -2,6 +2,9 @@ package com.suncorp.repaycalculator.response;
 
 import com.suncorp.repaycalculator.request.LoanAmount;
 
+/**
+ * @author Divya
+ */
 public class RepayCalcResponse {
 
     private LoanAmount totalInclFees;

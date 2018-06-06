@@ -2,6 +2,9 @@ package com.suncorp.repaycalculator.request;
 
 import java.math.BigDecimal;
 
+/**
+ * @author Divya
+ */
 public class LoanAmount {
     private BigDecimal amount;
     private String currency;

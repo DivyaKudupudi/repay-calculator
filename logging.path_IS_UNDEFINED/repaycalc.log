@@ -1,0 +1,122 @@
+2018-06-04 19:53:09 - Starting RepayCalculatorApplication on Divya-PC with PID 8828 (E:\MyWorkSpace\repay-calculator\target\classes started by Divya in E:\MyWorkSpace\repay-calculator)
+2018-06-04 19:53:09 - Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-06-04 19:53:09 - No active profile set, falling back to default profiles: default
+2018-06-04 19:53:10 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@291ae: startup date [Mon Jun 04 19:53:10 IST 2018]; root of context hierarchy
+2018-06-04 19:53:19 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3180d6d1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-04 19:53:22 - Tomcat initialized with port(s): 8080 (http)
+2018-06-04 19:53:22 - Initializing ProtocolHandler ["http-nio-8080"]
+2018-06-04 19:53:22 - Starting service [Tomcat]
+2018-06-04 19:53:22 - Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-04 19:53:22 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_161\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Divya\AppData\Roaming\Cloud Foundry;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Divya\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Java\jdk1.8.0_161\jre\lib;C:\Users\Divya\AppData\Roaming\npm;;C:\Program Files\Microsoft VS Code\bin;.]
+2018-06-04 19:53:22 - Initializing Spring embedded WebApplicationContext
+2018-06-04 19:53:22 - Root WebApplicationContext: initialization completed in 12458 ms
+2018-06-04 19:53:22 - Servlet dispatcherServlet mapped to [/]
+2018-06-04 19:53:22 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-04 19:53:22 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-04 19:53:22 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-04 19:53:22 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-04 19:53:23 - HikariPool-1 - Starting...
+2018-06-04 19:53:24 - HikariPool-1 - Start completed.
+2018-06-04 19:53:24 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-04 19:53:24 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-04 19:53:24 - HHH000412: Hibernate Core {5.2.17.Final}
+2018-06-04 19:53:24 - HHH000206: hibernate.properties not found
+2018-06-04 19:53:24 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-04 19:53:25 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-06-04 19:53:26 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@553bc36c'
+2018-06-04 19:53:26 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-04 19:53:27 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-04 19:53:27 - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@291ae: startup date [Mon Jun 04 19:53:10 IST 2018]; root of context hierarchy
+2018-06-04 19:53:27 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-06-04 19:53:28 - Mapped "{[/api/repay/loanTypes],methods=[GET]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanTypeDropDown()
+2018-06-04 19:53:28 - Mapped "{[/api/repay/loanPurpose],methods=[GET],produces=[application/json;charset=UTF-8]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPurposeDropDown()
+2018-06-04 19:53:28 - Mapped "{[/api/repay/calculate],methods=[POST]}" onto public com.suncorp.repaycalculator.response.RepayCalcResponse com.suncorp.repaycalculator.controller.RepayCalController.calculateRepayment(com.suncorp.repaycalculator.request.RepayCalcRequest)
+2018-06-04 19:53:28 - Mapped "{[/api/repay/loanPeriod],methods=[GET]}" onto public java.util.List<com.suncorp.repaycalculator.dto.CommonCodeMapBean> com.suncorp.repaycalculator.controller.RepayCalController.getLoanPeriodDropDown()
+2018-06-04 19:53:28 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-04 19:53:28 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-04 19:53:28 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-04 19:53:28 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-04 19:53:28 - Registering beans for JMX exposure on startup
+2018-06-04 19:53:28 - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-06-04 19:53:28 - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-06-04 19:53:29 - Starting ProtocolHandler ["http-nio-8080"]
+2018-06-04 19:53:30 - Using a shared selector for servlet write/read
+2018-06-04 19:53:30 - Tomcat started on port(s): 8080 (http) with context path ''
+2018-06-04 19:53:30 - Started RepayCalculatorApplication in 25.482 seconds (JVM running for 49.3)
+2018-06-04 19:58:06 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-04 19:58:06 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-06-04 19:58:06 - FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2018-06-04 20:00:12 - Populating Loan Type dropdown start
+2018-06-04 20:00:12 - Populating Loan Type dropdown end
+2018-06-04 20:02:41 - Populating Loan Type dropdown start
+2018-06-04 20:02:41 - Populating Loan Type dropdown end
+2018-06-04 20:04:06 - Populating Loan Type dropdown start
+2018-06-04 20:04:06 - Populating Loan Type dropdown end
+2018-06-04 20:28:31 - Populating Loan Type dropdown start
+2018-06-04 20:28:31 - Populating Loan Type dropdown end
+2018-06-04 20:30:21 - Populating Loan Type dropdown start
+2018-06-04 20:30:21 - Populating Loan Type dropdown end
+2018-06-04 20:30:44 - Populating Loan Type dropdown start
+2018-06-04 20:30:44 - Populating Loan Type dropdown end
+2018-06-04 20:32:06 - Populating Loan Type dropdown start
+2018-06-04 20:32:06 - Populating Loan Type dropdown end
+2018-06-04 20:35:19 - Populating Loan Type dropdown start
+2018-06-04 20:35:19 - Populating Loan Type dropdown end
+2018-06-04 20:35:46 - Populating Loan Type dropdown start
+2018-06-04 20:35:46 - Populating Loan Type dropdown end
+2018-06-04 20:37:05 - Populating Loan Type dropdown start
+2018-06-04 20:37:05 - Populating Loan Type dropdown end
+2018-06-04 20:39:36 - Populating Loan Type dropdown start
+2018-06-04 20:39:36 - Populating Loan Type dropdown end
+2018-06-04 20:41:25 - Populating Loan Type dropdown start
+2018-06-04 20:41:25 - Populating Loan Type dropdown end
+2018-06-04 20:44:58 - Populating Loan Type dropdown start
+2018-06-04 20:44:58 - Populating Loan Type dropdown end
+2018-06-04 20:45:12 - Populating Loan Type dropdown start
+2018-06-04 20:45:12 - Populating Loan Type dropdown end
+2018-06-04 20:47:59 - Populating Loan Type dropdown start
+2018-06-04 20:47:59 - Populating Loan Type dropdown end
+2018-06-04 20:50:33 - Populating Loan Type dropdown start
+2018-06-04 20:50:33 - Populating Loan Type dropdown end
+2018-06-04 20:51:56 - Populating Loan Type dropdown start
+2018-06-04 20:51:56 - Populating Loan Type dropdown end
+2018-06-04 20:57:26 - Populating Loan Type dropdown start
+2018-06-04 20:57:26 - Populating Loan Type dropdown end
+2018-06-04 20:58:03 - Populating Loan Type dropdown start
+2018-06-04 20:58:03 - Populating Loan Type dropdown end
+2018-06-04 20:58:07 - Populating Loan Purpose dropdown start
+2018-06-04 20:58:07 - Populating Loan purpose dropdown end
+2018-06-04 20:58:27 - Populating Loan Type dropdown start
+2018-06-04 20:58:27 - Populating Loan Type dropdown end
+2018-06-04 20:58:28 - Populating Loan Purpose dropdown start
+2018-06-04 20:58:28 - Populating Loan purpose dropdown end
+2018-06-04 20:59:23 - Populating Loan Type dropdown start
+2018-06-04 20:59:23 - Populating Loan Type dropdown end
+2018-06-04 20:59:23 - Populating Loan Purpose dropdown start
+2018-06-04 20:59:23 - Populating Loan purpose dropdown end
+2018-06-04 22:00:04 - Populating Loan Purpose dropdown start
+2018-06-04 22:00:04 - Populating Loan purpose dropdown end
+2018-06-04 22:00:04 - Populating Loan Type dropdown start
+2018-06-04 22:00:04 - Populating Loan Type dropdown end
+2018-06-04 22:01:25 - Populating Loan Type dropdown start
+2018-06-04 22:01:25 - Populating Loan Type dropdown end
+2018-06-04 22:01:25 - Populating Loan Purpose dropdown start
+2018-06-04 22:01:25 - Populating Loan purpose dropdown end
+2018-06-04 22:01:49 - Populating Loan Type dropdown start
+2018-06-04 22:01:49 - Populating Loan Type dropdown end
+2018-06-04 22:01:49 - Populating Loan Purpose dropdown start
+2018-06-04 22:01:49 - Populating Loan purpose dropdown end
+2018-06-04 22:13:29 - Populating Loan Type dropdown start
+2018-06-04 22:13:29 - Populating Loan Type dropdown end
+2018-06-04 22:13:29 - Populating Loan Purpose dropdown start
+2018-06-04 22:13:29 - Populating Loan purpose dropdown end
+2018-06-04 22:17:35 - Populating Loan Type dropdown start
+2018-06-04 22:17:35 - Populating Loan Type dropdown end
+2018-06-04 22:17:35 - Populating Loan Purpose dropdown start
+2018-06-04 22:17:35 - Populating Loan purpose dropdown end
+2018-06-04 23:25:19 - Populating Loan Type dropdown start
+2018-06-04 23:25:19 - Populating Loan Type dropdown end
+2018-06-04 23:25:19 - Populating Loan Purpose dropdown start
+2018-06-04 23:25:20 - Populating Loan purpose dropdown end
